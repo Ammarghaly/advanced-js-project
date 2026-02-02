@@ -62,6 +62,7 @@ body {
   width: 200px;
   padding: 8px 25px;
   font-size: 1.2rem;
+  margin: 10px 0;
   font-weight: bold;
   border-radius: 4px;
   color: #e8dcb5;
@@ -398,4 +399,115 @@ button.disabled {
   box-shadow:
     inset 0 0 15px rgba(0, 0, 0, 0.9),
     0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 1024px) {
+  .btns {
+    width: 80%; 
+  }
+
+  .box-details {
+    width: 80%;
+  }
+
+  .books {
+    width: 90%;
+    justify-content: center; 
+  }
+
+  .model-add-box,
+  .model-add-book,
+  .model-delete {
+    width: 80vw; 
+    height: auto; 
+    max-height: 90vh; 
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .container h1 {
+    font-size: 1.5rem;
+    padding: 15px;
+    border-width: 5px; 
+  }
+
+  .btns {
+    width: 95%;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .btns button:first-child,
+  .btns button:last-child {
+    width: 100%; 
+  }
+
+  .box-details {
+    width: 95%;
+    padding: 10px;
+  }
+  
+  img.len {
+    width: 100%; 
+    height: auto;
+  }
+  .books {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    gap: 15px;
+  }
+  .model-add-box,
+  .model-add-book,
+  .model-delete {
+    width: 95vw;
+    padding: 20px 10px;
+  }
+
+  .model-add-box .inputs,
+  .model-delete .inputs,
+  .model-add-book .inputs {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .model-add-box .inputs div,
+  .model-delete div,
+  .model-add-book .inputs div {
+    width: 100%;
+    align-items: center;
+  }
+
+  .model-add-box .inputs div input,
+  .model-delete div input,
+  .model-add-book .inputs div input,
+  .model-delete #deleteInput {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .floeBtn {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+    bottom: 15px;
+    left: 15px;
+  }
+  .model-delete h1 {
+    font-size: 1.5rem;
+  }
+  
+  .model-delete label b {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .books .book {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+  }
 }
