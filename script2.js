@@ -268,6 +268,11 @@ models.addEventListener("click", function (e) {
     closeModel();
   }
 });
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModel();
+  }
+});
 
 function renderBox(box) {
   nameBoxUI.textContent = box.name;
@@ -346,20 +351,28 @@ addBook.addEventListener("click", function () {
     return;
   }
 
-  if (isNaN(numOfChapters) || numOfChapters <= 0) {
-    alert("عدد الفصول يجب أن يكون رقمًا أكبر من صفر");
+  if (
+    isNaN(numOfChapters) ||
+    numOfChapters <= 0 ||
+    !Number.isInteger(numOfChapters)
+  ) {
+    alert("عدد الفصول يجب أن يكون رقمًا صحيح");
     numOfChaptersInput.focus();
     return;
   }
 
-  if (isNaN(numOfPages) || numOfPages <= 0) {
-    alert("عدد الصفحات يجب أن يكون رقمًا أكبر من صفر");
+  if (isNaN(numOfPages) || numOfPages <= 0 || !Number.isInteger(numOfPages)) {
+    alert("عدد الصفحات يجب أن يكون رقمًا صحيح");
     numOfPagesInput.focus();
     return;
   }
 
-  if (isNaN(numOfCopies) || numOfCopies <= 0) {
-    alert("عدد النسخ يجب أن يكون رقمًا أكبر من صفر");
+  if (
+    isNaN(numOfCopies) ||
+    numOfCopies <= 0 ||
+    !Number.isInteger(numOfChapters)
+  ) {
+    alert("عدد النسخ يجب أن يكون رقمًا صحيح");
     numOfCopiesInput.focus();
     return;
   }
@@ -418,6 +431,7 @@ deleteBtn.addEventListener("click", function () {
   deleteInput.value = "";
   updateDeleteButtonsVisibility();
   closeModel();
+  alert("تم الحذف بنجاح");
 });
 
 function updateDeleteButtonsVisibility() {

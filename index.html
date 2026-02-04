@@ -28,6 +28,7 @@
 
     <div class="models" id="models">
       <div class="model-add-box" id="modelAddBox">
+        <div id="btnX" onclick= closeModel()>X</div>
         <h1>اضافة صندوق</h1>
 
         <div class="inputs">
@@ -62,6 +63,7 @@
       <!-- =================================================================== -->
 
       <div class="model-add-book" id="modelAddBook">
+          <div id="btnX" onclick= closeModel()>X</div>
         <h1>اضافة كتاب</h1>
 
         <div class="inputs">
@@ -99,12 +101,13 @@
       <!-- =================================================================== -->
 
       <div class="model-delete" id="modelDelete">
+          <div id="btnX" onclick= closeModel()>X</div>
         <div class="delete">
           <h1>حذف كتاب</h1>
           <label><b>اسم</b> <span id="deleteByName"></span></label>
           <input id="deleteInput" required />
-          <button id="deleteBtn" class="delete-confirm">حذف</button>
         </div>
+        <button id="deleteBtn" class="delete-confirm">حذف</button>
       </div>
     </div>
 
